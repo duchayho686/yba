@@ -1,0 +1,107 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local main = Instance.new("Frame")
+local Frame = Instance.new("Frame")
+local Frame_2 = Instance.new("Frame")
+local SupBabe = Instance.new("TextButton")
+local TextButton = Instance.new("TextButton")
+local close = Instance.new("TextButton")
+local mainopen = Instance.new("Frame")
+local open = Instance.new("TextButton")
+
+--Properties:
+
+ScreenGui.Parent = game.CoreGui
+
+main.Name = "main"
+main.Parent = ScreenGui
+main.BackgroundColor3 = Color3.fromRGB(16, 16, 16)
+main.BackgroundTransparency = 0.300
+main.Position = UDim2.new(0.479102969, 0, 0.368000001, 0)
+main.Size = UDim2.new(0, 277, 0, 171)
+main.Visible = false
+main.Active = true
+main.Draggable = true
+
+Frame.Parent = main
+Frame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Frame.BackgroundTransparency = 0.600
+Frame.Size = UDim2.new(0, 277, 0, 31)
+
+Frame_2.Parent = main
+Frame_2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Frame_2.BackgroundTransparency = 0.600
+Frame_2.Position = UDim2.new(0, 0, 0.818713427, 0)
+Frame_2.Size = UDim2.new(0, 277, 0, 31)
+
+SupBabe.Name = "SupBabe"
+SupBabe.Parent = main
+SupBabe.BackgroundColor3 = Color3.fromRGB(255, 0, 127)
+SupBabe.Position = UDim2.new(0.0433213003, 0, 0.356725156, 0)
+SupBabe.Size = UDim2.new(0, 116, 0, 49)
+SupBabe.Font = Enum.Font.GothamBold
+SupBabe.Text = "SupBabe"
+SupBabe.TextColor3 = Color3.fromRGB(0, 0, 0)
+SupBabe.TextSize = 14.000
+SupBabe.TextWrapped = true
+SupBabe.MouseButton1Down:connect(function()
+getgenv().Key = "HelloEpicGUI"
+loadstring(game:HttpGet("https://raw.githubusercontent.com/SupBabe/YBAHOPPER/main/YBAv2.lua"))()
+end)
+
+TextButton.Name = "???"
+TextButton.Parent = main
+TextButton.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+TextButton.Position = UDim2.new(0.519855618, 0, 0.356725156, 0)
+TextButton.Size = UDim2.new(0, 116, 0, 49)
+TextButton.Font = Enum.Font.GothamBold
+TextButton.Text = "???"
+TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.TextScaled = true
+TextButton.TextSize = 14.000
+TextButton.TextWrapped = true
+TextButton.MouseButton1Down:connect(function()
+loadstring(game:HttpGet("https://gist.githubusercontent.com/duchayho686/d24b518ad0d58f8c82481f8eed8115fc/raw/b59f6d6e9f5d5b10411133618710324a1421f39c/yba"))()
+end)
+
+close.Name = " close"
+close.Parent = main
+close.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+close.Position = UDim2.new(0.859205782, 0, 0, 0)
+close.Size = UDim2.new(0, 39, 0, 31)
+close.Font = Enum.Font.GothamBold
+close.Text = "X"
+close.TextColor3 = Color3.fromRGB(0, 0, 0)
+close.TextSize = 14.000
+close.TextWrapped = true
+close.MouseButton1Down:connect(function()
+mainopen.Visible = true
+main.Visible = false	
+end)
+
+mainopen.Name = "mainopen"
+mainopen.Parent = ScreenGui
+mainopen.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+mainopen.Position = UDim2.new(0.0499490313, 0, 0.49000001, 0)
+mainopen.Size = UDim2.new(0, 50, 0, 24)
+mainopen.Active = true
+mainopen.Draggable = true
+
+open.Name = "open"
+open.Parent = mainopen
+open.BackgroundColor3 = Color3.fromRGB(0, 255, 255)
+open.Size = UDim2.new(0, 50, 0, 24)
+open.Font = Enum.Font.Bangers
+open.Text = "OPEN"
+open.TextColor3 = Color3.fromRGB(0, 0, 0)
+open.TextScaled = true
+open.TextSize = 14.000
+open.TextWrapped = true
+open.MouseButton1Down:connect(function()
+main.Visible = true
+mainopen.Visible = false
+end)
